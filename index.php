@@ -6,7 +6,7 @@
     require __DIR__ .'/header.php';
 ?>
 
-<h1>test</h1>
+<h1 class = "title">fake news</h1>
 </body>
 
 </html>
