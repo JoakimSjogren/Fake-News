@@ -6,9 +6,9 @@
     require __DIR__ .'/header.php';
     require __DIR__ .'/data.php';
 ?>
-
+<header>
 <h1 class = "title">fake news</h1>
-
+</header>
 <?php
 foreach($articles as $article) {
     $title = $article['title'];
@@ -18,13 +18,16 @@ foreach($articles as $article) {
     $likes = $article['likeCounter'];
 
     ?>
-        <!-- Conent -->
-        <h1> <?php echo $title ?> </h1>
-        <h1> <?php echo $content ?> </h1>
-        <h1> <?php echo $author ?> </h1>
-        <h1> <?php echo $date ?> </h1>
-        <h1> <?php echo $likes ?> </h1>
+    <main class = "article-container">
+        <!-- Article content -->
+        <p> <?php echo $title ?> </p>
+        <p> <?php echo $content ?> </p>
+        <p> <?php echo $author ?> </p>
+        <p> <?php echo $date ?> </p>
+        <p> <?php echo $likes ?> </p>
+    </main>
     <?php
+
 
 }
 ?>

@@ -1,3 +1,19 @@
+* {
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: center;
+}
 .title {
     text-transform: uppercase;
+    color: red;
+    text-shadow: -1px 1px 5px black;
+    font-size: 4rem;
+}
+
+.article-container {
+    background-color: gray;
+    margin-bottom: 1rem;
+    
 }
