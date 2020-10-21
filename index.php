@@ -11,20 +11,25 @@
 </header>
 <?php
 foreach($articles as $article) {
+    $id = $article['id'];
     $title = $article['title'];
     $content = $article['content'];
     $author = $article['author'];
     $date = $article['publishedDate'];
     $likes = $article['likeCounter'];
+    $linkToArticle = '/article.php?id=' . $id;
 
     ?>
     <main class = "article-container">
-        <!-- Article content -->
-        <p> <?php echo $title ?> </p>
-        <p> <?php echo $content ?> </p>
-        <p> <?php echo $author ?> </p>
-        <p> <?php echo $date ?> </p>
-        <p> <?php echo $likes ?> </p>
+        <a class = "article-button" href = "<?php echo $linkToArticle ?>">
+            <!-- Article content -->
+            <h2> <?php echo $title ?> </h2>
+            <p> <?php echo $content ?> </p>
+            <p> <?php echo $author ?> </p>
+            <p> <?php echo $date ?> </p>
+            <p> <?php echo $likes ?> </p>
+            <p> <?php echo $id ?> </p>
+        </a>
     </main>
     <?php
 

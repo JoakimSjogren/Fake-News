@@ -13,7 +13,12 @@ header {
 }
 
 .article-container {
-    background-color: gray;
-    margin-bottom: 1rem;
-    
+    margin: 0 10% 1rem 10%;
+    background-color: rgb(124, 124, 124);
+}
+
+.article-button {
+    width: 100%;
+    text-decoration: none;
+    color: white;
 }
