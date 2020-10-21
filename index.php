@@ -7,7 +7,7 @@
     require __DIR__ .'/data.php';
 ?>
 <header>
-<h1 class = "title">fake news</h1>
+    <a href = "index.php" class = "logo"><h1 class = "title">fake news</h1></a>
 </header>
 <?php
 foreach($articles as $article) {
@@ -24,11 +24,10 @@ foreach($articles as $article) {
         <a class = "article-button" href = "<?php echo $linkToArticle ?>">
             <!-- Article content -->
             <h2> <?php echo $title ?> </h2>
-            <p> <?php echo $content ?> </p>
-            <p> <?php echo $author ?> </p>
-            <p> <?php echo $date ?> </p>
+            <p> <?php echo $content . '<br>'?> </p>
+            <p> <?php echo $author . '  -' . $date?> </p>
+            
             <p> <?php echo $likes ?> </p>
-            <p> <?php echo $id ?> </p>
         </a>
     </main>
     <?php

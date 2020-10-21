@@ -12,7 +12,11 @@ require __DIR__ . '/data.php';
             $author = $article['author'];
             $date = $article['publishedDate'];
             $likes = $article['likeCounter'];   
+            require __DIR__.'/header.php';
             ?>
+            <header>
+            <a href = "index.php" class = "logo"><h1 class = "title">fake news</h1></a>
+            </header>
             <main class = "article-container">
                 <!-- Article content -->
                 <h2> <?php echo $title ?> </h2>
@@ -24,7 +28,11 @@ require __DIR__ . '/data.php';
         </main>
 
         <?php
+
+        //Break out of loop when right article has been found
+        break;
         }
+
     }
    
 
