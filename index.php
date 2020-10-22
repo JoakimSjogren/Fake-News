@@ -18,11 +18,12 @@ foreach($articles as $article) {
     $date = $article['publishedDate'];
     $likes = $article['likeCounter'];
     $linkToArticle = '/article.php?id=' . $id;
-
+    $thumbnail = $article['thumbnail'];
     ?>
     <main class = "article-container">
         <a class = "article-button" href = "<?php echo $linkToArticle ?>">
             <!-- Article content -->
+            <img src="<?php echo $thumbnail?>" width="100%">
             <h2> <?php echo $title ?> </h2>
             <p> <?php echo $content . '<br>'?> </p>
             <p> <?php echo $author . '  -' . $date?> </p>
