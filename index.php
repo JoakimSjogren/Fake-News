@@ -10,15 +10,22 @@
     <a href = "index.php" class = "logo"><h1 class = "title">fake news</h1></a>
 </header>
 <?php
+require __DIR__.'/functions.php';
 foreach($articles as $article) {
+    
+    
     $id = $article['id'];
     $title = $article['title'];
     $content = $article['content'];
-    $author = $article['author'];
+    $authorId = $article['authorId'];
     $date = $article['publishedDate'];
     $likes = $article['likeCounter'];
     $linkToArticle = '/article.php?id=' . $id;
     $thumbnail = $article['thumbnail'];
+    
+    //Author name
+   
+    $authorName = getAuthorById($authorId);
     ?>
     <main class = "article-container">
         <a class = "article-button" href = "<?php echo $linkToArticle ?>">
@@ -26,7 +33,7 @@ foreach($articles as $article) {
             <img src="<?php echo $thumbnail?>" width="100%">
             <h2 class = "article-title"> <?php echo $title ?> </h2>
             <p> <?php echo $content . '<br>'?> </p>
-            <p> <?php echo $author . '  -' . $date?> </p>
+            <p> <?php echo $authorName . '  -' . $date?> </p>
             
             <p> <?php echo $likes ?> </p>
         </a>
