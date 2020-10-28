@@ -5,11 +5,8 @@
 // of the files containing HTML or even better; in another PHP file altogether.
     require __DIR__ .'/header.php';
     require __DIR__ .'/data.php';
-?>
-<header>
-    <a href = "index.php" class = "logo"><h1 class = "title">fake news</h1></a>
-</header>
-<?php
+
+
 require __DIR__.'/functions.php';
 foreach($articles as $article) {
     
@@ -29,10 +26,11 @@ foreach($articles as $article) {
     ?>
     <main class = "article-container">
         <a class = "article-button" href = "<?php echo $linkToArticle ?>">
+        
             <!-- Article content -->
             <img src="<?php echo $thumbnail?>" width="100%">
             <h2 class = "article-title"> <?php echo $title ?> </h2>
-            <p> <?php echo $content . '<br>'?> </p>
+            <p> <?php echo $content . '<br> <br> <br>'?> </p>
             <p> <?php echo $authorName . '  -' . $date?> </p>
             
             <p> <?php echo $likes ?> </p>
