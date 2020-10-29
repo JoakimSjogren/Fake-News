@@ -33,7 +33,7 @@ require __DIR__ . '/data.php';
             <p> <?php echo $content ?> </p>
             <p> <?php echo $author ?> </p>
             <p> <?php echo $date ?> </p>
-            <p> <?php echo $likes ?> </p>
+            <p>👍 <?php echo $likes ?> </p>
     </main>
 
     <?php

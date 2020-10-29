@@ -13,16 +13,25 @@ foreach($articles as $article) {
     
     $id = $article['id'];
     $title = $article['title'];
+
+    //Preview content
+    $previewContentLength = 80;
     $content = $article['content'];
+    if (strlen($content) < $previewContentLength) {
+     $content = $article['content'];
+    }
+    else {
+        $content = substr($article['content'], 0, $previewContentLength) . "...";
+    }
+
     $authorId = $article['authorId'];
     $date = $article['publishedDate'];
-    $likes = $article['likeCounter'];
     $linkToArticle = '/article.php?id=' . $id;
     $thumbnail = $article['thumbnail'];
     
     //Author name
-   
     $authorName = getAuthorById($authorId);
+    
     ?>
     <main class = "article-container">
         <a class = "article-button" href = "<?php echo $linkToArticle ?>">
@@ -30,10 +39,8 @@ foreach($articles as $article) {
             <!-- Article content -->
             <img src="<?php echo $thumbnail?>" width="100%">
             <h2 class = "article-title"> <?php echo $title ?> </h2>
-            <p> <?php echo $content . '<br> <br> <br>'?> </p>
-            <p> <?php echo $authorName . '  -' . $date?> </p>
-            
-            <p> <?php echo $likes ?> </p>
+            <p class = "content"> <?php echo $content . '<br>'?> </p>
+           <em> <p> <?php echo $authorName . '  -' . $date?> </p> </em>
         </a>
     </main>
     <?php
