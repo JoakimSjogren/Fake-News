@@ -26,16 +26,19 @@ require __DIR__ . '/data.php';
     function printArticle($title, $thumbnail, $content,$author,$date,$likes){
         require __DIR__ . '/header.php';
         ?>
-        <main class = "article-container">
+        <main class = "article-page-container">
             <!-- Article content -->
-            <h2 class = "article-title"> <?php echo $title ?> </h2>
+            <h2 class = "article-page-title"> <?php echo $title ?> </h2>
             <img src="<?php echo $thumbnail?>" width="100%">
-            <p> <?php echo $content ?> </p>
-            <p> <?php echo $author ?> </p>
-            <p> <?php echo $date ?> </p>
+            <p class = "article-page-content"> <?php echo $content?> </p>
+            <em>
+                <p>Published:  <?php echo $date ?> </p>
+                <p> - <?php echo $author ?> </p>
+            </em>
+            
             <p>👍 <?php echo $likes ?> </p>
     </main>
-
+        
     <?php
     }
 ?>

@@ -6,10 +6,10 @@ declare(strict_types=1);
 // execute/run any functions in this file. Keep it dumb.
 
 
-function getAuthorById($id) {
+function getAuthorById(int $id) {
     require __DIR__ .'/data.php';
     foreach($authors as $author) {
-        if ($author['id'] == $id) {
+        if ($author['id'] === $id) {
             return $author['name'];
             break;
         }

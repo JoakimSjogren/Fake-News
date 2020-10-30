@@ -1,0 +1,17 @@
+.article-page-title {
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.article-page-container {
+    margin: 0 20% 1rem 20%;
+    background-color: rgb(196, 196, 196);
+    border: black 3px solid;
+}
+
+.article-page-content {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+

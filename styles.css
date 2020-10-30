@@ -15,8 +15,9 @@ header {
     color: red;
     text-shadow: -1px 1px 8px black;
     font-size: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     margin-top: 2rem;
+    font-family: 'Syne Mono', monospace;
 }
 
 
