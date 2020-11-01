@@ -1,5 +1,15 @@
 # Fake-News
 
+## Installion Instruction
+
+Start a php localserver
+php -S localhost:8000
+
+Open browser and go to http://localhost:8000/
+
+## Testers
+Amanda Fager
+Joacim Johansson
 
 ## Feedback - Daniel Borgström
 
